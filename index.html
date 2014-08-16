@@ -10,7 +10,7 @@
 		<meta name="author" content="">
 
 		<title>Chive Player</title>
-
+		<script src="bower_components/platform/platform.js"></script>
 		<!-- Bootstrap Core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
@@ -18,7 +18,8 @@
 		<!-- Custom CSS -->
 		<link href="css/simple-sidebar.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
-
+		<link href="css/PlaylistTable.css" rel="stylesheet">
+		<link href="css/material.css" rel="stylesheet">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,7 +39,7 @@
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
 					<li class="sidebar-brand">
-						<a href="#"> Chive Player </a>
+						<a href="#"><h2> Chive Player </h2></a>
 					</li>
 					<li>
 						<a href="#">Home</a>
@@ -70,17 +71,27 @@
 			<!-- Page Content -->
 			<div id="page-content-wrapper">
 				<div class="container-fluid">
-					
+
 					<!--Playlist header-->
 					<div class="jumbotron">
-						<h1>Chill / Revise</h1>
+						<!-- <h1 id="playlistTitle">Chill / Revise</h1> -->
+						<h1 class="editable">Chill / Revise</h1>
+
 						<p>
-							Cool drum and bass to calm you down 
-						</p>
+							Cool drum and bass to calm you down
+							<div class="button raised green">
+      						<div class="center" fit>OK</div>
+     						 <paper-ripple fit></paper-ripple>
+    						</div>
+    						 <section class="yellow-slider"> 
+ 						     <paper-slider id="testProgressSlider" value="50"></paper-slider>
+  							 </section>
+
 					</div>
-					
+
 					<!--Playlist body-->
 					<div id="songTableView">
+
 						<table id="playlistTable" class="table table-stribed">
 							<thead>
 								<tr>
@@ -89,32 +100,18 @@
 									<th>Views</th>
 								</tr>
 							</thead>
-							<tbody>
-								<tr ondblclick=clickedRow(0)>
-									<td>Flinch InfusFt. Elan) (Trolley Snatcha Remix) (Official Video)</td>
-									<td>3:00</td>
-									<td>214,641</td>
-								</tr>
+							<tbody id="songListTitle">
 
-								<tr ondblclick=clickedRow(0)>
-									<td>Flinch  Infuze - Belly Of The Beasdatcha Remix) (Official Video)</td>
-									<td>3:00</td>
-									<td>214,641</td>
-								</tr>
-
-								<tr  ondblclick=clickedRow(0)>
-									<td>Flinch  Infuze - Belly lley Snatcha Remix) (Official Video)</td>
-									<td>3:00</td>
-									<td>214,641</td>
-								</tr>
-
-								<tr  ondblclick=clickedRow(0)>
-									<td>Fl(Trolley Snatcha Remix) (Official Video)</td>
-									<td>3:00</td>
-									<td>214,641</td>
-								</tr>
 							</tbody>
 						</table>
+
+						<!-- <div id="sortable" class="list-group">
+						<a href="#" class="list-group-item active"> Cras justo odio </a>
+						<a id="3" href="#" class="list-group-item">Dapibus ac facilisis in</a>
+						<a href="#" class="list-group-item">Morbi leo risus</a>
+						<a href="#" class="list-group-item">Porta ac consectetur ac</a>
+						<a href="#" class="list-group-item">Vestibulum at eros</a>
+						</div> -->
 					</div>
 				</div>
 				<!--Content Fluid -->
@@ -127,37 +124,27 @@
 		<script src="js/jquery-1.11.0.js"></script>
 
 		<!-- Bootstrap Core JavaScript -->
+		
+
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/ytPlaylistHandler.js"></script>
 		<script src="js/youtubeAPIHandler.js"></script>
 		<script src="js/playerControls.js"></script>
 		<script src="js/tableHandler.js"></script>
-		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"</script>
+		<script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>
 
-		<!-- Menu Toggle Script -->
-		<script>
-			$("#menu-toggle").click(function(e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled");
-			});
-			$(playSSong).click(function(e) {
-				e.preventDefault();
-				player.loadVideoById("bHQqvYy5KYo", 5, "large");
+		<link rel="import" href="bower_components/paper-elements/paper-elements.html"> 
+		
 
-			});
-			$(function() {
-
-				$("#slider").slider();
-
-			});
-
-		</script>
+		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+		
 		<div id="controls">
 			<div id="playerControls" >
 				<span id="prevSongSpan" class="glyphicon glyphicon-backward playerControl" onclick="prevSongButton()"> </span>
 				<span id="playPauseSpan" class="glyphicon glyphicon-play playerControl" onclick="playPauseButton()"> </span>
 				<span id="nextSongSpan" class="glyphicon glyphicon-forward playerControl" onclick="nextSongButton()"> </span>
-				</div>
 			</div>
+		</div>
 
 		</div>
 		</div>

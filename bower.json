@@ -1,0 +1,21 @@
+{
+  "name": "ChivePlayer",
+  "version": "0.0.1",
+  "description": "Youtube Music Player",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "Rory Crispin"
+  ],
+  "license": "MIT",
+  "homepage": "rozzles.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

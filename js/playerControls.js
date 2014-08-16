@@ -24,3 +24,7 @@ function nextSongButton() {
 function stopVideo() {
     player.stopVideo();
 }
+
+function statePlaying(){
+    
+}
