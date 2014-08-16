@@ -30,9 +30,6 @@ $(function() {
 
 	//document.getElementById("testProgressSlider").value = 3;
 
-	$( "#testProgressSlider" ).change(function() {
-		console.log("slider" + $( "#testProgressSlider" ).immediateValue);
-});
 
 
 
