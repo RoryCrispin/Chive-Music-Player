@@ -7,11 +7,14 @@ function ytGetPlaylist(playlistId){
                 fillTableWithPlaylist(jsonResult.items[i].snippet.title, jsonResult.items[i].snippet.resourceId.videoId);
  }
 makePlaylistClickable();
+refreshRipple();
+
 });
 
 }
 
 function fillTableWithPlaylist(title, id){
-	$("#songListTitle").append("<tr id='" +id +"'><td>" + title+ "</td><td>3:00</td><td>214,641</td></tr>");
-
+	//$("#songListTitle").append("<tr class='ripplex' id='" +id +"'><td>" + title+ "</td><td>3:00</td><td>214,641</td></tr>");
+	//  <a href="#" class="list-group-item active playerlist">Cras justo odio </a>
+	$("#playgroup").append(" <a id='" +id +"' class='list-group-item ripplex playerlist'>"+title+"</a>");
 }

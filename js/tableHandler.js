@@ -4,65 +4,55 @@ function clickedRow(event) {
 	console.log(event.target.id);
 }
 
-function fillTable(){
-	$("#songListTitle").append("<tr><td>linch Infxxxxxxxxxxx) (Trolley Sn</td><td>3:00</td><td>214,641</td></tr>");
-
-}
 $(function() {
+	tinymce.init({
+		selector: "h1.editable",
+		inline: true,
+		toolbar: false,
+		menubar: false,
+
+		setup: function(editor) {
+			editor.on('change', function(e) {
+				renamedPlaylist(e.target.targetElm.firstChild.textContent);
+			});
+		}
+	});
 
 
-
-
-	//$('#playlistTitle').editable();
-				tinymce.init({
-    selector: "h1.editable",
-    inline: true,
-    toolbar: false,
-    menubar: false,
-
-      setup: function(editor) {
-        editor.on('change', function(e) {
-            renamedPlaylist(e.target.targetElm.firstChild.textContent);
-        });
-    }
-
-    	
-
-	//document.getElementById("testProgressSlider").value = 3;
-
-	$( "#testProgressSlider" ).change(function() {
-		console.log("slider" + $( "#testProgressSlider" ).immediateValue);
-});
-
-
-
-});
-
-
-$("#playlistTable tbody").sortable().disableSelection();
+	$("#playlistTable tbody").sortable().disableSelection();
 
 	ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
-
+	refreshRipple();
 });
 
-function makePlaylistClickable(){
+function makePlaylistClickable() {
 
-	$('#playlistTable').find('tr').dblclick(function() {
+	$('#playgroup').find('a').dblclick(function() {
 		var row = $(this).attr("id");
 		//alert('You clicked ' + row);
 		ytLoadVideo(row);
 	});
 }
 
-function renamedPlaylist(newName){
+function renamedPlaylist(newName) {
 	console.log(newName);
 }
 
-function focus(){
+function focus() {
 	while (1) {
-		 window.setInterval(function(){
-                            
-                    console.log(player.getCurrentTime());
-                        },1000);
+		window.setInterval(function() {
+
+			console.log(player.getCurrentTime());
+		}, 1000);
 	}
 }
+
+$('.context').contextmenu({
+  target:'#context-menu', 
+  before: function(e,context) {
+    // execute code before context menu if shown
+  },
+  onItem: function(context,e) {
+    // execute on menu item selection
+  }
+})

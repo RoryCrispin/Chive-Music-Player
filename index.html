@@ -10,16 +10,19 @@
 		<meta name="author" content="">
 
 		<title>Chive Player</title>
-		<script src="bower_components/platform/platform.js"></script>
+	
+	
+		
+
 		<!-- Bootstrap Core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
+		<link href="css/ripple.css" rel="stylesheet">
 
 		<!-- Custom CSS -->
 		<link href="css/simple-sidebar.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 		<link href="css/PlaylistTable.css" rel="stylesheet">
-		<link href="css/material.css" rel="stylesheet">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,11 +35,20 @@
 	</head>
 
 	<body>
+		<ul id="contextMenu" class="dropdown-menu" role="menu" style="display:none" >
+			    <li><a tabindex="-1" href="#"><span class="glyphicon glyphicon-play"></span>    Play</a></li>
+			    <li><a tabindex="-1" href="#"><span class="glyphicon glyphicon-share-alt"></span>    Add to..</a></li></a></li>
+			    <li><a tabindex="-1" href="#"><span class="glyphicon glyphicon-plus-sign"></span>    Up next</a></li></a></li>
+			    <li><a tabindex="-1" href="#"><span class="glyphicon glyphicon-facetime-video"></span>    Watch on YouTube</a></li></a></li>
+			    
+			    
+			</ul>
+
 
 		<div id="wrapper">
 
 			<!-- Sidebar -->
-			<div id="sidebar-wrapper">
+			<div id="sidebar-wrapper" class="rippler default">
 				<ul class="sidebar-nav">
 					<li class="sidebar-brand">
 						<a href="#"><h2> Chive Player </h2></a>
@@ -73,37 +85,36 @@
 				<div class="container-fluid">
 
 					<!--Playlist header-->
-					<div class="jumbotron">
+					<div class="jumbotron ripplex">
 						<!-- <h1 id="playlistTitle">Chill / Revise</h1> -->
 						<h1 class="editable">Chill / Revise</h1>
 
 						<p>
 							Cool drum and bass to calm you down
-							<div class="button raised green">
-      						<div class="center" fit>OK</div>
-     						 <paper-ripple fit></paper-ripple>
-    						</div>
-    						 <section class="yellow-slider"> 
- 						     <paper-slider id="testProgressSlider" value="50"></paper-slider>
-  							 </section>
-
+						
 					</div>
 
 					<!--Playlist body-->
 					<div id="songTableView">
 
-						<table id="playlistTable" class="table table-stribed">
+						<!-- <table id="playlistTable" class="table table-stribed">
 							<thead>
 								<tr>
+									<th></th>
 									<th>Title</th>
-									<th>Length</th>
-									<th>Views</th>
+									
+
 								</tr>
 							</thead>
 							<tbody id="songListTitle">
-
+								<tr class='' id='id'><td> Titlex</td></tr>
 							</tbody>
 						</table>
+
+					-->
+					<div id="playgroup" class="list-group">
+
+					</div>
 
 						<!-- <div id="sortable" class="list-group">
 						<a href="#" class="list-group-item active"> Cras justo odio </a>
@@ -120,24 +131,25 @@
 
 		</div>
 		<!-- /#wrapper -->
-		<!-- jQuery Version 1.11.0 -->
+
 		<script src="js/jquery-1.11.0.js"></script>
-
-		<!-- Bootstrap Core JavaScript -->
-		
-
+		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+
+		<script src="js/ripple.js"></script>
+		<!-- <script src="bower_components/bootstrap-contextmenu/bootstrap-contextmenu.js"></script> -->
 		<script src="js/ytPlaylistHandler.js"></script>
 		<script src="js/youtubeAPIHandler.js"></script>
 		<script src="js/playerControls.js"></script>
 		<script src="js/tableHandler.js"></script>
+		<script src="js/contextMenu.js"></script>
 		<script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>
 
-		<link rel="import" href="bower_components/paper-elements/paper-elements.html"> 
 		
 
-		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 		
+
+
 		<div id="controls">
 			<div id="playerControls" >
 				<span id="prevSongSpan" class="glyphicon glyphicon-backward playerControl" onclick="prevSongButton()"> </span>
