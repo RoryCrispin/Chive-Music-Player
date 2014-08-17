@@ -63,6 +63,7 @@
     };
 })(jQuery, window);
 
+function refreshContextMenu(){
 $("#playgroup a").contextMenu({
     menuSelector: "#contextMenu",
     menuSelected: function (invokedOn, selectedMenu) {
@@ -71,3 +72,4 @@ $("#playgroup a").contextMenu({
         alert(msg);
     }
 });
+}

@@ -32,27 +32,33 @@ function makePlaylistClickable() {
 		//alert('You clicked ' + row);
 		ytLoadVideo(row);
 	});
+
+//tappable
+	$('#playgroup').find('a').on("tap",function(){
+  var row = $(this).attr("id");
+		//alert('You clicked ' + row);
+		ytLoadVideo(row);
+});
+
 }
 
 function renamedPlaylist(newName) {
 	console.log(newName);
 }
 
-function focus() {
-	while (1) {
-		window.setInterval(function() {
 
-			console.log(player.getCurrentTime());
-		}, 1000);
-	}
+// $('.context').contextmenu({
+//   target:'#context-menu', 
+//   before: function(e,context) {
+//     // execute code before context menu if shown
+//   },
+//   onItem: function(context,e) {
+//     // execute on menu item selection
+//   }
+// })
+
+function refreshTableGlyphs(){
+makePlaylistClickable();
+refreshRipple();
+refreshContextMenu();
 }
-
-$('.context').contextmenu({
-  target:'#context-menu', 
-  before: function(e,context) {
-    // execute code before context menu if shown
-  },
-  onItem: function(context,e) {
-    // execute on menu item selection
-  }
-})

@@ -53,6 +53,16 @@
 					<li class="sidebar-brand">
 						<a href="#"><h2> Chive Player </h2></a>
 					</li>
+					 <form>
+					    <div class="group">  
+
+					     <input id="searchInput" type="search" required>
+					      <span class="highlight"></span>
+					      <span class="bar"></span>
+					  </form>
+					      <label>Search...</label>
+					    </div>
+       
 					<li>
 						<a href="#">Home</a>
 					</li>
@@ -87,7 +97,7 @@
 					<!--Playlist header-->
 					<div class="jumbotron ripplex">
 						<!-- <h1 id="playlistTitle">Chill / Revise</h1> -->
-						<h1 class="editable">Chill / Revise</h1>
+						<h1 id="jumbotronTitle" class="editable">Chill / Revise</h1>
 
 						<p>
 							Cool drum and bass to calm you down
@@ -113,16 +123,11 @@
 
 					-->
 					<div id="playgroup" class="list-group">
+						<a href="#" class="list-group-item"> <span href="http://google.com" class="glyphicon glyphicon-play"></span>      Morbi leo risus</a>
 
 					</div>
 
-						<!-- <div id="sortable" class="list-group">
-						<a href="#" class="list-group-item active"> Cras justo odio </a>
-						<a id="3" href="#" class="list-group-item">Dapibus ac facilisis in</a>
-						<a href="#" class="list-group-item">Morbi leo risus</a>
-						<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-						<a href="#" class="list-group-item">Vestibulum at eros</a>
-						</div> -->
+						
 					</div>
 				</div>
 				<!--Content Fluid -->
@@ -132,22 +137,23 @@
 		</div>
 		<!-- /#wrapper -->
 
+		<script src="js/PRIVATE_KEYS.js"></script>
 		<script src="js/jquery-1.11.0.js"></script>
 		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 
 		<script src="js/ripple.js"></script>
-		<!-- <script src="bower_components/bootstrap-contextmenu/bootstrap-contextmenu.js"></script> -->
+		<script src="js/jumbotronHandler.js"></script>
 		<script src="js/ytPlaylistHandler.js"></script>
+		
 		<script src="js/youtubeAPIHandler.js"></script>
 		<script src="js/playerControls.js"></script>
 		<script src="js/tableHandler.js"></script>
 		<script src="js/contextMenu.js"></script>
+		<script src="js/sidebar.js"></script>
+		
+		<script src="js/jquery.mobile.custom.min.js"></script>
 		<script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-
-		
-
-		
 
 
 		<div id="controls">
