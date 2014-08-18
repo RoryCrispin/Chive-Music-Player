@@ -19,9 +19,9 @@ $(function() {
 	});
 
 
-	$("#playlistTable tbody").sortable().disableSelection();
+	
 
-	ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
+	//ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
 	refreshRipple();
 });
 
@@ -61,4 +61,6 @@ function refreshTableGlyphs(){
 makePlaylistClickable();
 refreshRipple();
 refreshContextMenu();
+$("#playgroup a").sortable().disableSelection();
+
 }

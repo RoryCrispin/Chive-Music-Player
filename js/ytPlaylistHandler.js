@@ -30,3 +30,21 @@ function fillTableWithPlaylist(title, id){
 	//  <a href="#" class="list-group-item active playerlist">Cras justo odio </a>
 	$("#playgroup").append(" <a id='" +id +"' class='list-group-item ripplex playerlist'>"+title+"</a>");
 }
+
+
+THIS BELOW HERE DOES LASTFM SHIZZLE
+***********************************
+
+$( document ).ready(function() {
+
+    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=track.search&track=do%20i%20wanna&api_key=5c14af2842949df6b7263aacc7ffffb1&format=json",function(xmlResult){
+        for(var i = 0; i<4; i++){
+            
+         console.log(xmlResult.results.trackmatches.track[i].name + " -- " + xmlResult.results.trackmatches.track[i].artist);
+            console.log(xmlResult.results.trackmatches.track[i].image[2]['#text']);
+        }
+         
+ });
+    
+});
+

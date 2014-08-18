@@ -1,5 +1,5 @@
 @media (max-width: 6000px) {
-  html { 
+body { 
   background: url('../res/images/coffee.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
