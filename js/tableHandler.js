@@ -21,7 +21,7 @@ $(function() {
 
 	
 
-	//ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
+	ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
 	refreshRipple();
 });
 
