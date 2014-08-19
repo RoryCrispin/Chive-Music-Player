@@ -32,8 +32,8 @@ function fillTableWithPlaylist(title, id){
 }
 
 
-THIS BELOW HERE DOES LASTFM SHIZZLE
-***********************************
+//THIS BELOW HERE DOES LASTFM SHIZZLE
+//***********************************
 
 $( document ).ready(function() {
 
