@@ -28,9 +28,11 @@ function performSong_LFMSearch(songName, id){
     //console.log(songName);
     $.getJSON("http://ws.audioscrobbler.com/2.0/?method=track.search&track="  + songName +"&api_key=5c14af2842949df6b7263aacc7ffffb1&format=json&limit=1",function(jsonResult){
       //  console.log(jsonResult.results.trackmatches);
-        meta = { "id" : id,
-            "title" : jsonResult.results.trackmatches.track.name,
-              "artist" : jsonResult.results.trackmatches.track.artist};
+        meta = {    "id"     : id,
+                    "title"  : jsonResult.results.trackmatches.track.name,
+                    "artist" : jsonResult.results.trackmatches.track.artist,
+                    "cover0" : jsonResult.results.trackmatches.track.image[0]['#text']};
+
         retLastFM_metaTrackArtist(meta);
     });
 }
@@ -43,5 +45,5 @@ function retLastFM_metaTrackArtist(meta) {
     appendTableMetadata(meta);
 }
 function appendTableMetadata(meta){
- appendToMainTable(meta.id,meta.title,meta.album,meta.artist);
+ appendToMainTable(meta.id,meta.title,meta.album,meta.artist,meta.cover0);
 }

@@ -94,9 +94,9 @@ function refreshTableGlyphs(){
 
 }
 
-function appendToMainTable(id,title, album, artist){
+function appendToMainTable(id,title, album, artist, cover0){
 
     //$("#playgroup").append(" <a id='" + id + "' class='list-group-item ripplex playerlist'>" + title + "</a>");
-    $("#songListTitle").append("  <tr class='ripplex' ytID='" +id+ "'> <td class='table_playId' id='" + id+"'>  </td><td>"+ title +"<div id='table-righxt' style='float:right;'>   <span class='explicit glyphicon glyphicon-flag' title='Explicit'></span> </div></td><td>"+ artist+"</td> <td> " + album +"</td> </tr> ");
+    $("#songListTitle").append("  <tr class='ripplex' ytID='" +id+ "'> <td class='table_playId' id='" + id+"'></td> <td><img src='"+cover0+"'</td> <td>"+ title +"<div id='table-righxt' style='float:right;'>   <span class='explicit glyphicon glyphicon-flag' title='Explicit'></span> </div></td><td>"+ artist+"</td> <td> " + album +"</td> </tr> ");
   refreshTableGlyphs();
 }
