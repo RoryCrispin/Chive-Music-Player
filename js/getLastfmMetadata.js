@@ -24,23 +24,24 @@ function checkExplicit(trackName){
     }
 }
 
-function performSong_LFMSearch(songName){
+function performSong_LFMSearch(songName, id){
     //console.log(songName);
-    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=track.search&track="  + songName +"&api_key=5c14af2842949df6b7263aacc7ffffb1&format=json",function(result){
-        var res = [result.results.trackmatches.track[0].name, result.results.trackmatches.track[0].artist];
-
-        appendTableMetadata(res)
+    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=track.search&track="  + songName +"&api_key=5c14af2842949df6b7263aacc7ffffb1&format=json&limit=1",function(jsonResult){
+      //  console.log(jsonResult.results.trackmatches);
+        meta = { "id" : id,
+            "title" : jsonResult.results.trackmatches.track.name,
+              "artist" : jsonResult.results.trackmatches.track.artist};
+        retLastFM_metaTrackArtist(meta);
     });
 }
-
-function call_LFMSearch(trackName){
-    performSong_LFMSearch(trackName);
+function  fetchMeta_YTTitle(title, id){
+    performSong_LFMSearch(cleanSongNameFor_LFMSearch(title), id);
 }
-function appendTableMetadata(results){
-    console.log(results[0]);
-    console.log(results[1]);
-}
-function  fetchMeta_YTTitle(title){
-    performSong_LFMSearch(cleanSongNameFor_LFMSearch(title));
 
+function retLastFM_metaTrackArtist(meta) {
+    //Not getting album yet
+    appendTableMetadata(meta);
+}
+function appendTableMetadata(meta){
+ appendToMainTable(meta.id,meta.title,meta.album,meta.artist);
 }

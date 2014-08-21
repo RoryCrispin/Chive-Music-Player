@@ -35,15 +35,14 @@ function fillTableWithPlaylist(title, id) {
     //  <a href="#" class="list-group-item active playerlist">Cras justo odio </a>
 
     if (fetchMetaForYTSongs) {
-        fetchMeta_YTTitle(title);
+        fetchMeta_YTTitle(title, id);
+
     } else {
         appendToMainTable(id,title,null,null);
     }
 }
 
-function appendToMainTable(id,title, album, artist){
-    $("#playgroup").append(" <a id='" + id + "' class='list-group-item ripplex playerlist'>" + title + "</a>");
-}
+
 
 
 //THIS BELOW HERE DOES LASTFM SHIZZLE
