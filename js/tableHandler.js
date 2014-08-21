@@ -22,7 +22,8 @@ $(function() {
 
 
 
-    ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
+   // ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
+    ytGetPlaylist(demoPlaylist());
     refreshTableGlyphs();
 });
 
@@ -71,7 +72,7 @@ function loadTableIDPlayButtons() {
     $("tr").hover(function () {
         var td1 = $(this).find(".table_playId");
         prev = td1.text();
-        td1.html("<span class='idPlayButton glyphicon glyphicon-play' title='Play' cursor='pointer' ></span>");
+        td1.html("<span class='idPlayButton glyphicon glyphicon-play' title='Play'></span>");
     }, function () {
         $(this).find(".table_playId").text("");
     });
@@ -94,9 +95,9 @@ function refreshTableGlyphs(){
 
 }
 
-function appendToMainTable(id,title, album, artist, cover0){
+function appendToMainTable(id,title, album, artist, cover0, explicit){
 
     //$("#playgroup").append(" <a id='" + id + "' class='list-group-item ripplex playerlist'>" + title + "</a>");
-    $("#songListTitle").append("  <tr class='ripplex' ytID='" +id+ "'> <td class='table_playId' id='" + id+"'></td> <td><img src='"+cover0+"'</td> <td>"+ title +"<div id='table-righxt' style='float:right;'>   <span class='explicit glyphicon glyphicon-flag' title='Explicit'></span> </div></td><td>"+ artist+"</td> <td> " + album +"</td> </tr> ");
+    $("#songListTitle").append("  <tr class='ripplex' ytID='" +id+ "'> <td class='table_playId alignTable' id='" + id+"'></td> <td><img src='"+cover0+"'</td> <td class='alignTable'>"+ title +"<div id='table-righxt'  style='float:right;'>   " + explicit +" </div></td><td class='alignTable'>"+ artist+"</td> <td class='alignTable'> " + album +"</td> </tr> ");
   refreshTableGlyphs();
 }

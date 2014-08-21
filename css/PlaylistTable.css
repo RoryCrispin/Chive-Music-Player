@@ -16,3 +16,22 @@
 #table_idHeader{
     width:30px;
 }
+
+.alignTable{
+    position: relative;
+    top: 50%;
+    transform: translateY(+16%);
+}
+tr{
+     padding:3px !important;
+ }
+td{
+    padding:3px !important;
+}
+
+tr:hover{
+    background-color: #f8f8f8;
+}
+.idPlayButton {
+    cursor: pointer;
+}
