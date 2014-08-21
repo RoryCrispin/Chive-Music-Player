@@ -22,8 +22,8 @@ $(function() {
 
 
 
-    //ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
-    refreshRipple();
+    ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
+    refreshTableGlyphs();
 });
 
 function loadYTVideo_TableClick(id) {
@@ -31,9 +31,11 @@ function loadYTVideo_TableClick(id) {
 }
 function makePlaylistClickable() {
 
-    $('#playgroup').find('a').dblclick(function() {
-        var row = $(this).attr("id");
+    $('tbody').find('tr').dblclick(function() {
+        console.log("Click");
+        var row = $(this).attr("ytID");
         //alert('You clicked ' + row);
+        console.log(row);
         loadYTVideo_TableClick(row)
     });
 
@@ -45,9 +47,6 @@ function makePlaylistClickable() {
         loadYTVideo_TableClick(row);
     }); */
 
-    $(".table_playId").click(function() {
-        loadYTVideo_TableClick($(this).attr("id"));
-    });
 
 
 
@@ -69,18 +68,26 @@ function renamedPlaylist(newName) {
 // })
 
 function loadTableIDPlayButtons() {
-    $(".table_playId").hover(function () {
-        prev = $(this).text();
-        $(this).html("<span class='idPlayButton glyphicon glyphicon-play' title='Play'></span>");
+    $("tr").hover(function () {
+        var td1 = $(this).find(".table_playId");
+        prev = td1.text();
+        td1.html("<span class='idPlayButton glyphicon glyphicon-play' title='Play' cursor='pointer' ></span>");
     }, function () {
-        $(this).text(prev)
+        $(this).find(".table_playId").text("");
     });
+
+    $(".table_playId").click(function() {
+        loadYTVideo_TableClick($(this).attr("id"));
+    });
+
+
+
 }
 
 
 function refreshTableGlyphs(){
     makePlaylistClickable();
-    refreshRipple();
+   // refreshRipple();
     refreshContextMenu();
    // $("#playgroup a").sortable().disableSelection();
     loadTableIDPlayButtons();
@@ -90,5 +97,6 @@ function refreshTableGlyphs(){
 function appendToMainTable(id,title, album, artist){
 
     //$("#playgroup").append(" <a id='" + id + "' class='list-group-item ripplex playerlist'>" + title + "</a>");
-    $("#songListTitle").append("  <tr> <td class='table_playId' id=''" + id+"'> 1 </td><td>"+ title +"<div id='table-righxt' style='float:right;'>   <span class='explicit glyphicon glyphicon-flag' title='Explicit'></span> </div></td><td>"+ artist+"</td> <td> " + album +"</td> </tr> ");
+    $("#songListTitle").append("  <tr class='ripplex' ytID='" +id+ "'> <td class='table_playId' id='" + id+"'>  </td><td>"+ title +"<div id='table-righxt' style='float:right;'>   <span class='explicit glyphicon glyphicon-flag' title='Explicit'></span> </div></td><td>"+ artist+"</td> <td> " + album +"</td> </tr> ");
+  refreshTableGlyphs();
 }

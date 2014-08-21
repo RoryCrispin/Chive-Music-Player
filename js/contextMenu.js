@@ -64,7 +64,7 @@
 })(jQuery, window);
 
 function refreshContextMenu(){
-$("#playgroup a").contextMenu({
+$("tbody row").contextMenu({
     menuSelector: "#contextMenu",
     menuSelected: function (invokedOn, selectedMenu) {
         var msg = "You selected the menu item '" + selectedMenu.text() +

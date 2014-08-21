@@ -1,6 +1,6 @@
 function cleanSongNameFor_LFMSearch(trackName){
 
-    return (trackName.replace(/ *\([^)]*\) */g, "").replace("cover", "").replace("remix", ""));
+    return (trackName.replace(/ *\([^)]*\) */g, "").replace("cover", "").replace("remix", "").replace(/ *\[[^)]*\] */g, ""));
 }
 function checkRemix(trackName){
     if (trackName.toLowerCase().indexOf("remix") > -1 ) {
