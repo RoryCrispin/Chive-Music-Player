@@ -138,3 +138,4 @@ input:focus ~ .highlight {
     from { background:#701487; }
   to    { width:0; background:transparent; }
 }
+
