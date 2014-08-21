@@ -4,13 +4,18 @@ function ytGetPlaylist(playlistId){
 	 ytGetPlaylistMeta(playlistId);
 }
 function ytGetPlaylistItems(playlistId){
+    console.log(playlistId);
 	$.getJSON("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=" + playlistId +"&key=AIzaSyAaaLTueWV9tFju-k7sGcZruO27-1R3sus", 
 		function(jsonResult){
             console.log(jsonResult);
-            for (var i = 0; i< 50; i++) {
+            for (var i = 0; i< 49; i++) {
                // console.log(jsonResult.items[i].id);
-
-                fillTableWithPlaylist(jsonResult.items[i].snippet.title, jsonResult.items[i].snippet.resourceId.videoId);
+                var currentYtItem = jsonResult.items[i].snippet;
+                if (currentYtItem.title != "Deleted video") {
+                    fillTableWithPlaylist(currentYtItem.title, currentYtItem.resourceId.videoId);
+                } else {
+                    console.log("found undefined item");
+                }
  }
 refreshTableGlyphs();
 
