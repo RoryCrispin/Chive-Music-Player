@@ -12,13 +12,14 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
         width: '640',
-        videoId: 'UajWtT-gYs0',
         playerVars: {
             controls: 0
         },
         events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
+            'onError': onError
+
         }
     });
 }
@@ -37,6 +38,36 @@ function onPlayerReady(event) {
 var done = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
-        
+        statePlaying(true);
+    } else if (event.data == YT.PlayerState.PAUSED && !done){
+        statePlaying(false);
     }
+}
+
+function onError(errorCode){
+    if(errorCode == 101 || errorCode == 105){
+        ytVideoBlocked();
+    }
+}
+
+
+function ytVideoBlocked(){
+    //TODO: blockedVideo
+
+    //Check title of video for remix ect.
+
+
+    //Search videos api
+
+
+    //Create API of results, count them 
+
+    //for count
+
+    //check for remix ect
+
+    //Try a video, nested call
+
+    //hold for called id, if blocked try next for loop.
+
 }

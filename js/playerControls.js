@@ -25,6 +25,10 @@ function stopVideo() {
     player.stopVideo();
 }
 
-function statePlaying(){
-    
-}
+function statePlaying(bIsPlaying){
+    if(booleanState) {
+        isPlaying = true;
+    } else {
+        isPlaying = false;
+    }
+} 
