@@ -17,8 +17,8 @@ function onYouTubeIframeAPIReady() {
         },
         events: {
             'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-            'onError': onError
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError
 
         }
     });
@@ -44,7 +44,7 @@ function onPlayerStateChange(event) {
     }
 }
 
-function onError(errorCode){
+function onPlayerError(errorCode){
     if(errorCode == 101 || errorCode == 105){
         ytVideoBlocked();
     }
