@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -51,21 +51,21 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
                 <a href="#"><h2> Chive Player </h2></a>
+            </li>
+            <form>
+                <div class="group">
+
+                    <input id="searchInput" type="search" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+            </form>
+            <label>Search...</label>
+    </div>
+
+    <li>
+        <a onclick="sidebar_homeClick()">Home</a>
     </li>
-    <form>
-        <div class="group">
-
-            <input id="searchInput" type="search" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-    </form>
-    <label>Search...</label>
-</div>
-
-<li>
-    <a href="#">Home</a>
-</li>
-<li>
+    <li>
         <a href="#">Popular</a>
     </li>
     <li>
@@ -95,46 +95,13 @@
 
 
 
-        <!--Playlist header-->
-        <div class="jumbotron ripplex">
-            <!-- <h1 id="playlistTitle">Chill / Revise</h1> -->
-            <h1 id="jumbotronTitle">Explore</h1>
-
-            <p>
-
         </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Hyped tracks</h3>
-            </div>
-            <div class="panel-body">
-                <div id="topTracksPanel" class="topXPanel">
-                    <div class="largeAlbumImage">
-                        <img src="http://userserve-ak.last.fm/serve/126/98927239.png" alt="" />
-                        <img class="hoverimage" src="../res/icons/albumIconPlayButton.png" alt="" />
-                        <div class="title"> When the Sun Goes Down</div>
-                        <div class="artist"> Arctic Monkeys</div>
-                    </div>
-
-
-                    <div class="largeAlbumImage">
-                    <img src="http://userserve-ak.last.fm/serve/126/98927239.png" alt="" />
-                    <img class="hoverimage" src="../res/icons/albumIconPlayButton.png" alt="" />
-                    <div class="title"> When the Sun Goes Down</div>
-                    <div class="artist"> Arctic Monkeys</div>
-                    </div>
-                </div>
-            </div>
-
-
-            </div>
-        </div>
-
-        </div>
-
-
     </div>
+
+</div>
+
+
+</div>
 </div>
 <!--Content Fluid -->
 </div>
@@ -142,25 +109,32 @@
 
 </div>
 <!-- /#wrapper -->
-<script src="js/getLastfmMetadata.js"></script>
 <script src="js/jquery-1.11.0.js"></script>
 <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/browsePage/loadTopTracks.js"></script>
 <script src="js/ripple.js"></script>
 <script src="js/jumbotronHandler.js"></script>
-<script src="js/ytPlaylistHandler.js"></script>
+
 <script src="js/options.js"></script>
 
 
 <script src="js/playerControls.js"></script>
 <script src="js/contextMenu.js"></script>
 <script src="js/sidebar.js"></script>
-<script src="js/playQueue.js"></script>
+
 
 
 <script src="js/jquery.mobile.custom.min.js"></script>
 <script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+       // $('.container-fluid').load('frame_home.html');
+    });
+</script>
+
+
 
 
 <div id="controls">

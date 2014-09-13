@@ -30,6 +30,9 @@ $(function() {
 function loadYTVideo_TableClick(id) {
     ytLoadVideo(id);
 }
+function loadYTVideo_ContextClick(id) {
+    ytLoadVideo(id);
+}
 function makePlaylistClickable() {
 
     $('tbody').find('tr').dblclick(function() {

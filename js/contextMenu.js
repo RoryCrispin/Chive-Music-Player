@@ -69,7 +69,11 @@ $("tbody td").contextMenu({
     menuSelected: function (invokedOn, selectedMenu) {
         var msg = "You selected the menu item '" + selectedMenu.text() +
             "' on the value '" + invokedOn.text() + "'";
-        alert(msg);
+        //alert(msg);
+        console.log("selectedMenu.id");
+        if(selectedMenu.id = "#context-Play") {
+            loadYTVideo_ContextClick(invokedOn.id);
+        }
     }
 });
 }
