@@ -107,7 +107,8 @@ function performAlbum_LFMSearch(album, artist, callbackID){
 function handleCallback(callbackID, data){
 switch(callbackID) {
     case "albumFrameTable":
-        fillAlbumFrameTable(data);
+        //fillAlbumFrameTable(data);
+        getYtSongId_lfmAlbumSearch (data);
         break;
 }
 }
@@ -132,4 +133,14 @@ function padDigit(seconds) {
 function cleanLfmDate(date) {
     return /[0-9]{4}/.exec(date);
 }
+var albumSize;
+function getYtSongId_lfmAlbumSearch (data){
+    albumSize = data.tracks.length;
+    $.each(data.tracks, function(index) {
 
+       //console.log(this[0] + " " + data.artist);
+       searchSong_yt(this[0] + " " + data.artist,"albumTable", data, index);
+
+    });
+    fillAlbumFrameTable(albumData);
+}
