@@ -19,3 +19,22 @@ function demoPlaylist(){
 
     }
 }
+function getFramePram(){
+    switch(getURLpramWithName("frame")){
+
+
+        case "ytPlaylist":
+        $('.container-fluid').load('html_frames/frame_ytPlaylist.html');
+        break;
+
+        default:
+        $('.container-fluid').load('html_frames/frame_home.html');
+        break;
+    }
+
+}
+
+$(function() {
+    console.log("ready");
+    getFramePram();
+});

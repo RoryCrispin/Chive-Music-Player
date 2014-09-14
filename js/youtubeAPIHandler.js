@@ -1,4 +1,4 @@
-﻿
+
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -17,8 +17,8 @@ function onYouTubeIframeAPIReady() {
         },
         events: {
             'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange,
-            'onError': onPlayerError
+            'onStateChange': onPlayerStateChange
+            'onError': onError
 
         }
     });
@@ -31,9 +31,7 @@ function ytLoadVideo(id){
 function onPlayerReady(event) {
     //event.target.playVideo();
 }
-
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
+ aying a video (state=1),
 //    the player should play for six seconds and then stop.
 var done = false;
 function onPlayerStateChange(event) {
@@ -44,7 +42,7 @@ function onPlayerStateChange(event) {
     }
 }
 
-function onPlayerError(errorCode){
+function onError(errorCode){
     if(errorCode == 101 || errorCode == 105){
         ytVideoBlocked();
     }
