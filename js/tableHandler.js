@@ -23,7 +23,7 @@ $(function() {
 
 
    // ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
-    ytGetPlaylist(demoPlaylist());
+    //ytGetPlaylist(demoPlaylist());
     refreshTableGlyphs();
 });
 
@@ -98,9 +98,17 @@ function refreshTableGlyphs(){
 
 }
 
-function appendToMainTable(id,title, album, artist, cover0, explicit){
+function appendToMainTable(id, col1, col2, col3, cover0, explicit){
 
     //$("#playgroup").append(" <a id='" + id + "' class='list-group-item ripplex playerlist'>" + title + "</a>");
-    $("#songListTitle").append("  <tr class='ripplex' ytID='" +id+ "'> <td class='table_playId alignTable' id='" + id+"'></td> <td><img src='"+cover0+"'</td> <td class='alignTable'>"+ title +"<div id='table-righxt'  style='float:right;'>   " + explicit +" </div></td><td class='alignTable'>"+ artist+"</td> <td class='alignTable'> " + album +"</td> </tr> ");
+    $("#songListTitle").append("  <tr class='ripplex' ytID='" +id+ "'> <td class='table_playId alignTable' id='" + id+"'></td> <td> " + tableCover(cover0)+"</td> <td class='alignTable'>"+ col1 +"<div id='table-righxt'  style='float:right;'>   " + explicit +" </div></td><td class='alignTable'>"+ col2+"</td> <td class='alignTable'> " + col3 +"</td> </tr> ");
   refreshTableGlyphs();
+}
+function tableCover(url){
+    if(url != ""){
+        return "<img src='"+url+"'>";
+
+    } else {
+        return "";
+    }
 }

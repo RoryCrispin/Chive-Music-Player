@@ -50,7 +50,7 @@ function retLastFM_metaTrackArtist(meta) {
     appendTableMetadata(meta);
 }
 function appendTableMetadata(meta){
- appendToMainTable(meta.id,meta.title,meta.album,meta.artist,meta.cover0,meta.explicit);
+ appendToMainTable(meta.id, meta.title, meta.artist, meta.album, meta.cover0, meta.explicit);
 }
 
 function performDetails_LFMSearch(songName, artist) {
@@ -90,6 +90,7 @@ function performAlbum_LFMSearch(album, artist, callbackID){
         albumDetails = {    "tracks"      : tracks,
             "artist"      : jsonResult.album.artist,
             "releaseDate" : jsonResult.album.releasedate,
+            "release"     : jsonResult.album.name,
             "cover0"      : jsonResult.album.image[0]['#text'],
             "cover1"      : jsonResult.album.image[1]['#text'],
             "cover2"      : jsonResult.album.image[2]['#text'],
@@ -103,11 +104,30 @@ function performAlbum_LFMSearch(album, artist, callbackID){
     });
 }
 
-function handleCallback(callBackID, data){
+function handleCallback(callbackID, data){
 switch(callbackID) {
     case "albumFrameTable":
         fillAlbumFrameTable(data);
         break;
 }
+}
+function cleanLfmDuration(duration) {
+    if (duration < 10000){
+        var minutes = Math.floor(duration / 60);
+        var seconds = duration - minutes * 60;
+        return minutes + ":" + padDigit(seconds);
+    } else {
+        minutes = (duration/1000/60) << 0,
+            seconds = (duration/1000) % 60;
+        return minutes + ":" + padDigit(Math.round(seconds));
+    }
+}
+function padDigit(seconds) {
+    if (seconds < 10){
+       return "0" + seconds;
+    } else {
+        return seconds;
+    }
+
 }
 

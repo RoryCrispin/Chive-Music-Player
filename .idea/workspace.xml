@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccb34dc6-cf54-4c1b-8daa-38d175bb98e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/albumFrame.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/albumTable.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html_frames/frame_albumTable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/embed_home.html" afterPath="$PROJECT_DIR$/embed_home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_frames/frame_home.html" afterPath="$PROJECT_DIR$/html_frames/frame_home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/albumFrame.js" afterPath="$PROJECT_DIR$/js/albumFrame.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_frames/frame_albumTable.html" afterPath="$PROJECT_DIR$/html_frames/frame_albumTable.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/getLastfmMetadata.js" afterPath="$PROJECT_DIR$/js/getLastfmMetadata.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/initPage.js" afterPath="$PROJECT_DIR$/js/initPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/tileView.js" afterPath="$PROJECT_DIR$/js/tileView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/tableHandler.js" afterPath="$PROJECT_DIR$/js/tableHandler.js" />
     </list>
     <ignored path="ChivePlayer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,36 +52,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tableHandler.js" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/js/tableHandler.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.1847247" vertical-offset="1033" max-vertical-offset="1904">
-                  <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
-                  <folding>
-                    <marker date="1410721635372" expanded="false" signature="2554:2566" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="simple-sidebar.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/simple-sidebar.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
-                  <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+                  <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="frame_albumTable.html" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/html_frames/frame_albumTable.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-17.607143" vertical-offset="0" max-vertical-offset="799">
-                  <caret line="29" column="109" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -94,18 +65,18 @@
           <file leaf-file-name="frame_home.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/html_frames/frame_home.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1071">
-                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                <state vertical-scroll-proportion="-28.576923" vertical-offset="226" max-vertical-offset="1071">
+                  <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="albumFrame.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="albumFrame.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/albumFrame.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-                  <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.9094139" vertical-offset="134" max-vertical-offset="833">
+                  <caret line="40" column="80" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
                   <folding>
                     <element signature="e#0#41#0" expanded="false" />
                   </folding>
@@ -127,11 +98,33 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="getLastfmMetadata.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="getLastfmMetadata.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/getLastfmMetadata.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.45221844" vertical-offset="1129" max-vertical-offset="2023">
-                  <caret line="82" column="58" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="58" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1454" max-vertical-offset="2363">
+                  <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tableHandler.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/tableHandler.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7679181" vertical-offset="1352" max-vertical-offset="2023">
+                  <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+                  <folding>
+                    <marker date="1410724395685" expanded="true" signature="2556:2568" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="frame_albumTable.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/html_frames/frame_albumTable.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-10.423077" vertical-offset="222" max-vertical-offset="782">
+                  <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -176,9 +169,9 @@
         <option value="$PROJECT_DIR$/html_frames/frame_home.html" />
         <option value="$PROJECT_DIR$/embed_home.html" />
         <option value="$PROJECT_DIR$/css/albumTable.css" />
-        <option value="$PROJECT_DIR$/html_frames/frame_albumTable.html" />
         <option value="$PROJECT_DIR$/js/getLastfmMetadata.js" />
         <option value="$PROJECT_DIR$/js/albumFrame.js" />
+        <option value="$PROJECT_DIR$/html_frames/frame_albumTable.html" />
         <option value="$PROJECT_DIR$/js/tableHandler.js" />
       </list>
     </option>
@@ -502,12 +495,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32895753" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.077220075" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15542677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17860962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -563,7 +556,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -611,7 +604,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1853">
           <caret line="74" column="82" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
           <folding>
-            <marker date="1410721635372" expanded="false" signature="2554:2566" placeholder="..." />
+            <marker date="1410724395685" expanded="true" signature="2556:2568" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -689,7 +682,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1853">
           <caret line="74" column="82" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="82" />
           <folding>
-            <marker date="1410721635372" expanded="false" signature="2554:2566" placeholder="..." />
+            <marker date="1410724395685" expanded="true" signature="2556:2568" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -896,7 +889,7 @@
     <entry file="file://$PROJECT_DIR$/css/simple-sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -921,9 +914,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html_frames/frame_home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="-28.576923" vertical-offset="226" max-vertical-offset="1071">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/albumFrame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9094139" vertical-offset="134" max-vertical-offset="833">
+          <caret line="40" column="80" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -937,38 +940,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html_frames/frame_albumTable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.607143" vertical-offset="0" max-vertical-offset="799">
-          <caret line="29" column="109" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-10.423077" vertical-offset="222" max-vertical-offset="782">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/getLastfmMetadata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45221844" vertical-offset="1129" max-vertical-offset="2023">
-          <caret line="82" column="58" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1454" max-vertical-offset="2363">
+          <caret line="94" column="43" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/albumFrame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/tableHandler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1847247" vertical-offset="1033" max-vertical-offset="1904">
-          <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.7679181" vertical-offset="1352" max-vertical-offset="2023">
+          <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
           <folding>
-            <marker date="1410721635372" expanded="false" signature="2554:2566" placeholder="..." />
+            <marker date="1410724395685" expanded="true" signature="2556:2568" placeholder="..." />
           </folding>
         </state>
       </provider>
