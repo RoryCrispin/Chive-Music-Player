@@ -24,12 +24,14 @@ function getFramePram(){
 
 
         case "ytPlaylist":
-        $('.container-fluid').load('html_frames/frame_ytPlaylist.html');
-        break;
-
-        default:
-        $('.container-fluid').load('html_frames/frame_home.html');
-        break;
+            $('.container-fluid').load('html_frames/frame_ytPlaylist.html');
+            break;
+        case "album":
+            $('.container-fluid').load('html_frames/frame_albumTable.html');
+            break;
+        case "home":
+            $('.container-fluid').load('html_frames/frame_home.html');
+         break;
     }
 
 }

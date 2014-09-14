@@ -1,6 +1,6 @@
 function cleanSongNameFor_LFMSearch(trackName){
 
-    return (trackName.replace(/ *\([^)]*\) */g, "").replace("cover", "").replace("remix", "").replace(/ *\[[^)]*\] */g, ""));
+    return (trackName.replace(/ *\([^)]*\) */g, "").replace("cover", "").replace("remix", "").replace(/ *\[[^)]*\] */g, "").replace("[^a-zA-Z0-9 -]", ""));
 }
 function checkRemix(trackName){
     if (trackName.toLowerCase().indexOf("remix") > -1 ) {
@@ -52,3 +52,62 @@ function retLastFM_metaTrackArtist(meta) {
 function appendTableMetadata(meta){
  appendToMainTable(meta.id,meta.title,meta.album,meta.artist,meta.cover0,meta.explicit);
 }
+
+function performDetails_LFMSearch(songName, artist) {
+    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=5c14af2842949df6b7263aacc7ffffb1&format=json&artist=" + artist +"&track=" + songName ,function(jsonResult){
+        details = {
+            "title"     : jsonResult.track.name,
+            "artist"    : jsonResult.track.artist.name,
+            "playCount" : jsonResult.track.playcount,
+            "duration"  : jsonResult.track.duration,
+            "album"     : jsonResult.track.album.title,
+            "tag0"      : jsonResult.track.toptags.tag[0].name,
+            "tag1"      : jsonResult.track.toptags.tag[1].name,
+            "tag2"      : jsonResult.track.toptags.tag[2].name
+        };
+
+    console.log(details);
+    });
+
+}
+function getAlbumArt(meta) {
+    if (meta.cover0 != "") {
+        console.log("found extralarge");
+        console.log(meta.cover0);
+        $('#pic').css("background-image", "url('" + meta.cover0 + "')");
+    } else {
+        console.log("null");
+    }
+}
+
+function performAlbum_LFMSearch(album, artist, callbackID){
+    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=5c14af2842949df6b7263aacc7ffffb1&format=json&artist="+ artist +"&album="+ album ,function(jsonResult){
+        var tracks = [];
+        $.each(jsonResult.album.tracks.track, function() {
+            tracks.push([cleanSongNameFor_LFMSearch(this.name),this.duration]);
+        });
+        console.log(tracks);
+        albumDetails = {    "tracks"      : tracks,
+            "artist"      : jsonResult.album.artist,
+            "releaseDate" : jsonResult.album.releasedate,
+            "cover0"      : jsonResult.album.image[0]['#text'],
+            "cover1"      : jsonResult.album.image[1]['#text'],
+            "cover2"      : jsonResult.album.image[2]['#text'],
+            "cover3"      : jsonResult.album.image[3]['#text'],
+            "cover4"      : jsonResult.album.image[4]['#text'],
+            "summary"     :  jsonResult.album.wiki.summary,
+            "content"     :  jsonResult.album.wiki.content
+        };
+
+        handleCallback(callbackID, albumDetails);
+    });
+}
+
+function handleCallback(callBackID, data){
+switch(callbackID) {
+    case "albumFrameTable":
+        fillAlbumFrameTable(data);
+        break;
+}
+}
+
