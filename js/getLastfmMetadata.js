@@ -89,7 +89,7 @@ function performAlbum_LFMSearch(album, artist, callbackID){
         console.log(tracks);
         albumDetails = {    "tracks"      : tracks,
             "artist"      : jsonResult.album.artist,
-            "releaseDate" : jsonResult.album.releasedate,
+            "releaseDate" : cleanLfmDate(jsonResult.album.releasedate),
             "release"     : jsonResult.album.name,
             "cover0"      : jsonResult.album.image[0]['#text'],
             "cover1"      : jsonResult.album.image[1]['#text'],
@@ -128,6 +128,8 @@ function padDigit(seconds) {
     } else {
         return seconds;
     }
-
+}
+function cleanLfmDate(date) {
+    return /[0-9]{4}/.exec(date);
 }
 
