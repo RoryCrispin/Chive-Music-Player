@@ -32,6 +32,9 @@ function performSong_LFMSearch(songName, id){
                     "title"    : jsonResult.results.trackmatches.track.name,
                     "artist"   : jsonResult.results.trackmatches.track.artist,
                     "cover0"   : jsonResult.results.trackmatches.track.image[0]['#text'],
+                    "cover1"   : jsonResult.results.trackmatches.track.image[1]['#text'],
+                    "cover2"   : jsonResult.results.trackmatches.track.image[2]['#text'],
+                    "cover3"   : jsonResult.results.trackmatches.track.image[3]['#text'],
                     "explicit" :  checkExplicit(songName)
         };
 

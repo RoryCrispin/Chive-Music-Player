@@ -1,105 +1,58 @@
- <link href="css/Metrojs.min.css" rel="stylesheet">
-<!--Playlist header-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> freewall demo getting started</title>
+    <script src="../js/freewall.js"></script>
+    <link href='css/homeTile.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+        .item {
+            background: rgb(135, 199, 135);
+            width: 320px;
+            height: 320px;
+        }
+    </style>
+</head>
+<body>
 <div class="jumbotron ripplex">
-    <!-- <h1 id="playlistTitle">Chill / Revise</h1> -->
     <h1 id="jumbotronTitle">Explore</h1>
 
     <p>
 
 </div>
 
-<div class="panel panel-default">
-    <!-- 
-        <div class="panel-heading">
-            <h3 class="panel-title">Hyped tracks</h3>
-        </div>
-        <div class="panel-body">
-            <div id="topTracksPanel" class="topXPanel">
-                <div class="largeAlbumImage">
-                    <img src="http://userserve-ak.last.fm/serve/126/98927239.png" alt="" />
-                    <img class="hoverimage" src="../res/icons/albumIconPlayButton.png" alt="" />
-                    <div class="title"> When the Sun Goes Down</div>
-                    <div class="artist"> Arctic Monkeys</div>
-                </div>
 
-
-                <div class="largeAlbumImage">
-                    <img src="http://userserve-ak.last.fm/serve/126/98927239.png" alt="" />
-                    <img class="hoverimage" src="../res/icons/albumIconPlayButton.png" alt="" />
-                    <div class="title"> When the Sun Goes Down</div>
-                    <div class="artist"> Arctic Monkeys</div>
-                </div>
-            </div>
-        </div>
-    -->
-
-<!-- Start Tile 1 -->
-    <div class="list-tile">
-        <span class="tile-title">flip list</span>
-        <ul id="flip1" class="flip-list fourTiles" data-initdelay="4000" data-mode="flip-list" data-delay="4000">
-            <li>
-                <div class="myClass"><img src="http://www.drewgreenwell.com/images/1pixel.gif" alt="1" /></div>
-                <div><img src="www.drewgreenwell.com/images/1pixel.gif" alt=" " /></div>
-            </li>
-            <li> 
-                <div class="myClass"><img src="www.drewgreenwell.com/images/1pixel.gif" alt="1" /></div>
-                <div><img src="www.drewgreenwell.com/images/1pixel.gif" alt=" " /></div>
-            </li>
-            <li>
-                <div class="myClass"><img src="www.drewgreenwell.com/images/1pixel.gif" alt="1" /></div>
-                <div><img src="www.drewgreenwell.com/images/1pixel.gif" alt=" " /></div>
-            </li>
-            <li>
-                <div class="myClass"><img src="drewgreenwell.com/images/1pixel.gif" alt="1" /></div>
-                <div><img src="drewgreenwell.com/images/1pixel.gif" alt=" " /></div>
-            </li>
-        </ul>
-    </div>
-
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".live-tile").liveTile();
-    });
-</script>
+<div id="container">
+    <div class="item homeTile"><div class="hoverOverlay">  <i class="fa fa-list listButton"></i>  <i class="fa fa-play playButton"></i>    </div><div class="background"></div> <div class="caption">Trending Album</div> <div class="metaGroup"><div class="title">Black Widow</div> <div class="release ">The New Classic</div> <div class="artist">Iggy Azalea</div> </div></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
 </div>
 <script>
-
-//flip-list: image swapps and triggerDelay
-//an array of 9 images to swap between
-var imgs = [{src:'http://www.drewgreenwell.com/images/sample/1tw.gif', alt:'1'},
-                   {src:'http://www.drewgreenwell.com/images/sample/2tw.gif', alt:'2'},
-                   {src:'http://www.drewgreenwell.com/images/sample/3tw.gif', alt:'3'},
-                   {src:'http://www.drewgreenwell.com/images/sample/4tw.gif', alt:'4'},
-                   {src:'http://www.drewgreenwell.com/images/sample/5tw.gif', alt:'5'},
-                   {src:'http://www.drewgreenwell.com/images/sample/6tw.gif', alt:'6'},           {src:'http://www.drewgreenwell.com/images/sample/7tw.gif', alt:'7'},                       {src:'http://www.drewgreenwell.com/images/sample/8tw.gif', alt:'8'},   
-                   {src:'http://www.drewgreenwell.com/images/sample/9tw.gif', alt:'9'}            
-                  ];
-$("#flip1").liveTile(
-    {
-      mode:'flip-list',
-      swap:'image',
-      frontImages: imgs,
-      frontIsRandom: true,
-      backImages: imgs,
-      backIsBackgroundImage: true,
-      backIsInGrid: true,
-      backIsRandom:false,
-      // every tile in the list should flip every time the delay interval occurs
-      alwaysTrigger:true,
-      //flip the tiles in sequence
-      triggerDelay: function(idx){ return idx * 500; }
-    }
-);
-
+    $(function() {
+        var wall = new freewall("#container");
+        wall.fitWidth();
+        wall.reset({
+            animate: true,
+            cellW: 150,
+            cellH: 'auto',
+            onResize: function() {
+                wall.fitWidth();
+            }
+        });
+    });
 </script>
-<style>
+</body>
+</html>
 
-#flip1 li div.myClass{
-    background-color:navy;
-}
+ <script src="../js/freewall.js"></script>
 
-</style>
-
-
-<script src="js/MetroJs.min.js"></script>
+<script src="../js/tileView.js"></script>
