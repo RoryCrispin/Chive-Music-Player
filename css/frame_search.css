@@ -1,0 +1,113 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.masonry {
+    max-width: 100%;
+    background-color: #eeeeee;
+}
+
+.masonry .searchResult {
+    width:  200px;
+    height: 270px;
+    float: right;
+    background: #ffffff;
+    margin: 30px;
+    box-shadow: 0 0 5px #888888;
+}
+
+.item.w2 { width:  120px; }
+
+.searchResult .album { }
+
+
+
+.homeTile {
+
+    color: #595959;
+    font-family: "Oswald",sans-serif;
+    padding: 0px;
+
+}
+.homeTile .background{
+
+    position:absolute;
+
+
+    background: url("http://userserve-ak.last.fm/serve/300x300/97433945.png") no-repeat;
+    background-size: 100%,100%;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+
+
+}
+
+.homeTile .hoverOverlay {
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    z-index: 9999;
+
+    -webkit-transition: all 80ms linear;
+    -moz-transition: all 80ms linear;
+    -ms-transition: all 80ms linear;
+    -o-transition: all 80ms linear;
+    transition: all 80ms linear;
+    color:#ffffff;
+}
+
+.homeTile .hoverOverlay .playButton {
+    bottom: 0;
+    font-size: 100px;
+    height: 100px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    cursor: pointer;
+
+}
+.homeTile .hoverOverlay .listButton {
+    bottom: 10px;
+    font-size: 30px;
+    height: 40px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+
+.homeTile .caption {
+}
+.homeTile .title {
+    font-size: 17px;
+}
+.homeTile .release {
+    font-size: 9px;
+}
+.homeTile .artist {
+    font-size: 9px;
+}
+.homeTile .metaGroup {
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+
+}
+
+
