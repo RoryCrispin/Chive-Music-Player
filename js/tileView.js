@@ -6,3 +6,7 @@ $(".homeTile").hover(function(){
 },function(){
     $(this).find('.hoverOverlay').css("opacity","0");
 });
+
+#container {
+	width:150px;
+}

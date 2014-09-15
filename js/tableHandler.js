@@ -6,7 +6,13 @@ function clickedRow(event) {
 
 $(function() {
 
+    enableEditables();
+   // ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
+    //ytGetPlaylist(demoPlaylist());
+    refreshTableGlyphs();
+});
 
+function enableEditables(){
     tinymce.init({
         selector: "h1.editable",
         inline: true,
@@ -19,13 +25,7 @@ $(function() {
             });
         }
     });
-
-
-
-   // ytGetPlaylist("PLLF9xRBewdFae_xTw1q9AUW-Vma6B5PWU");
-    //ytGetPlaylist(demoPlaylist());
-    refreshTableGlyphs();
-});
+}
 
 function loadYTVideo_TableClick(id) {
     ytLoadVideo(id);
