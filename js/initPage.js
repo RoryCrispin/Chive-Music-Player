@@ -9,14 +9,13 @@ function getRootPram(){
 		console.log("Search pram");
 	}
 }
-function demoPlaylist(){
+function getYtPlaylistPram(){
     var ytPlaylistID = getURLpramWithName("ytplaylist")
     if (ytPlaylistID != null){
         return ytPlaylistID;
     } else {
         return "PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW"
         //window.location.replace("?ytplaylist=PL9tY0BWXOZFvWi6WNdcokF_YvXUxyESRW");
-
     }
 }
 function getFramePram(){
