@@ -22,6 +22,7 @@ function enableEditables(){
         setup: function(editor) {
             editor.on('change', function(e) {
                 renamedPlaylist(e.target.targetElm.firstChild.textContent);
+
             });
         }
     });
