@@ -3,7 +3,8 @@
  */
 $(function() {
     //lookupAlbum(artist, track, album)
-    console.log("albumFramejs loaded ok")
+    console.log("albumFramejs loaded ok");
+    getAlbumPrams();
 });
 
 function lookupAlbum(artist, track, album) {
