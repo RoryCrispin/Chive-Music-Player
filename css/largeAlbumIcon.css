@@ -1,0 +1,11 @@
+.largeAlbumImage { float: left; margin-left: 20px; position: relative; width: 145px; height: 200px; background-color: #eeeeee; padding: 10px;}
+.largeAlbumImage img {width: 126px; height: 126px; cursor: pointer;}
+.hoverimage { position: absolute; top: 10px; left: 10px; display: none; }
+.largeAlbumImage:hover .hoverimage { display: block; }
+.largeAlbumImage .title {
+
+}
+.largeAlbumImage .artist {
+font-size: 12px;
+    color: grey;
+}
