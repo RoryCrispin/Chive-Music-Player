@@ -28,7 +28,6 @@ function getFramePram(){
             break;
         case "album":
             $('.container-fluid').load('html_frames/frame_albumTable.html');
-            getAlbumPrams();
             break;
         case "home":
             $('.container-fluid').load('html_frames/frame_home.html');
@@ -44,6 +43,3 @@ $(function() {
     console.log("ready");
     getFramePram();
 });
-function getAlbumPrams(){
-    performAlbum_LFMSearch(getURLpramWithName("album"), getURLpramWithName("artist"),"albumFrameTable");
-}

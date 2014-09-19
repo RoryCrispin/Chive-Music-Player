@@ -28,9 +28,8 @@ function lookupAlbum(artist, track, album) {
     }
 }
 function fillAlbumFrameTable(data) {
-    $.each(data.tracks, function (index) {
-        console.log(data);
-        appendToMainTable(data.tracks[index][2],this[0]," ",cleanLfmDuration(this[1]),"","");
+    $.each(data.tracks, function () {
+        appendToMainTable("",this[0]," ",cleanLfmDuration(this[1]),"","");
     });
     fillAlbumHeader(data);
 }
