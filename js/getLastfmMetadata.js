@@ -95,9 +95,9 @@ function performAlbum_LFMSearch(album, artist, callbackID){
             "cover1"      : jsonResult.album.image[1]['#text'],
             "cover2"      : jsonResult.album.image[2]['#text'],
             "cover3"      : jsonResult.album.image[3]['#text'],
-            "cover4"      : jsonResult.album.image[4]['#text']//,
-            //"summary"     :  jsonResult.album.wiki.summary,
-            //"content"     :  jsonResult.album.wiki.content
+            "cover4"      : jsonResult.album.image[4]['#text'],
+            "summary"     :  jsonResult.album.wiki.summary,
+            "content"     :  jsonResult.album.wiki.content
         };
 
         handleCallback(callbackID, albumDetails);

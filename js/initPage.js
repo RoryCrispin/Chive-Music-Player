@@ -33,9 +33,6 @@ function getFramePram(){
         case "home":
             $('.container-fluid').load('html_frames/frame_home.html');
          break;
-         case "search":
-            $('.container-fluid').load('html_frames/frame_search.html');
-         break;
     }
 
 }
