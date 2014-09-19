@@ -33,4 +33,12 @@ Icon
 
 # Files that might appear on external disk
 .Spotlight-V100
+<<<<<<< HEAD
 .Trashes
+=======
+.Trashes
+
+workspace.xml
+
+.idea/workspace.xml
+>>>>>>> origin/gh-pages
