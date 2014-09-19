@@ -39,7 +39,7 @@ function getFramePram(){
 
 $(function() {
     console.log("ready");
-    getFramePram();
+    //getFramePram();
 });
 function getAlbumPrams(){
     performAlbum_LFMSearch(getURLpramWithName("album"), getURLpramWithName("artist"),"albumFrameTable");
