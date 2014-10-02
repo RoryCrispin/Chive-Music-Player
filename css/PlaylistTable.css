@@ -20,7 +20,7 @@
 .alignTable{
     position: relative;
     top: 50%;
-    transform: translateY(+16%);
+    /*transform: translateY(+16%);*/
 }
 tr{
      padding:3px !important;
