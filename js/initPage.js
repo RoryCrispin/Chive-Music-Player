@@ -24,6 +24,7 @@ function getFramePram(){
 
         case "ytPlaylist":
             $('.container-fluid').load('html_frames/frame_ytPlaylist.html');
+
             break;
         case "album":
             $('.container-fluid').load('html_frames/frame_albumTable.html');
