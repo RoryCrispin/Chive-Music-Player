@@ -1,0 +1,54 @@
+#mediaBar {
+    background-color: #5075AA;
+    width:100%;
+    height:50px;
+    position: absolute;
+    bottom:0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+#mediaBar {
+    color: white;
+    font-size: 20px;
+
+}
+#mediaBar .fa-backward{
+
+    margin-left:35px;
+    margin-top: 17px;
+}
+#mediaBar .fa-play{
+    margin-left:35px;
+   margin-top:10px;
+    font-size: 30px;
+    position: absolute;
+}
+#mediaBar .fa-forward{
+    margin-left:94px;
+}
+
+#mediaBar .sliderTimer {
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:13px;
+    right:135px;
+    position: absolute;
+    margin-top: 17px;
+}
+
+#mediaBar .fa-repeat {
+    right: 80px;
+    position: absolute;
+    margin-top: 17px;
+}
+#mediaBar .fa-random {
+    right: 35px;
+    position: absolute;
+    margin-top: 17px;
+}
+
+#mediaBar .greyHover:hover {
+    color: #c6c6c6;
+    cursor: pointer;
+
+}

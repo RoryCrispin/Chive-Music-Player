@@ -1,0 +1,39 @@
+
+#slider {
+
+    padding-top:7px;
+
+}
+
+
+#slider_inner {
+    background: none repeat scroll 0% 0% padding-box #E8E8E8;
+    border-radius: 2px;
+    bottom: 21px;
+    left: 170px;
+    width: calc(100% - 420px);
+    position: absolute;
+    margin-left: 35px;
+
+}
+
+.ui-slider-range {
+    height: 5px;
+    margin-top: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    background-clip: padding-box;
+    /*transition: width 0.25s;*/
+}
+
+.ui-slider-handle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    background-clip: padding-box;
+    position: absolute;
+    margin: -13px 0 0 -11px;
+    /*transition: left 0.25s;*/
+}

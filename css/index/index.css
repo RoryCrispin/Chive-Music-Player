@@ -1,0 +1,12 @@
+body {
+
+}
+
+#index_container {
+    height: 98%;
+    width: 98%;
+    left: 1%;
+    top: 1%;
+
+    position: absolute;
+}

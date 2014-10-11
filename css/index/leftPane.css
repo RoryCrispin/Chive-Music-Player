@@ -1,0 +1,82 @@
+
+#index_leftPane {
+    background-color: #002739;
+    width: 292px;
+    height:100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+.smallBlueText {
+    font-size: 12px;
+    color: #5075AA;
+}
+.largeThinText {
+    font-size: 18px;
+}
+.indentLevel1{
+    padding-left: 35px;
+}
+.indentLevel2{
+    padding-left: 53px;
+}
+
+.leftPane {
+    color:white;
+    font-family: 'Roboto', sans-serif;
+}
+.leftPane .title {
+    font-size: 40px;
+
+}
+.leftPane .searchBox {
+    font-size: 29px;
+
+}
+.leftPane .main {
+    padding-top: 0px;
+}
+.leftPane .genres .heading {
+    padding-top:22px;
+    font-size: 20px;
+}
+.leftPane .genres .genreName {
+    padding-top: 0px;
+}
+.leftPane .playlists .heading {
+    font-size: 20px;
+    padding-top:22px;
+}
+.leftPane .playlists .playlistName{
+    padding-top: 0px;
+}
+
+.nowPlaying {
+    bottom:54px;
+    position: absolute;
+}
+.nowPlaying .coverArt {
+    background: #5075AA url("http://upload.wikimedia.org/wikipedia/en/9/9d/Get_Rich_Or_Die_Tryin%27.JPG");
+    width:292px;
+    height:292px;
+}
+.nowPlaying .songInfo{
+    padding-left: 6px;
+}
+.nowPlaying .songInfo .name {
+ padding-top: 4px;
+}
+.nowPlaying .songInfo .albumArtist {
+    font-size: 15px;
+    color: #5075AA;
+}
+.leftPane .active {
+    background-color: #001828;
+}
+.leftPane .hoverItem:hover {
+    background-color: #001F31;
+    cursor: pointer;
+}
+.leftPane .noCursor {
+    cursor:default;
+}
