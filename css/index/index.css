@@ -10,3 +10,28 @@ body {
 
     position: absolute;
 }
+
+#rootFrame {
+    position: absolute;
+    top: 0px;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.white {
+    color: white;
+}
+
+.size39 {
+    font-size: 39px;
+}
+
+.size29 {
+    font-size: 29px;
+}
+
+.size19 {
+    font-size: 19px;
+}

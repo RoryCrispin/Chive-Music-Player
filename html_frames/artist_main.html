@@ -1,0 +1,256 @@
+<link rel="stylesheet" type="text/css" href="../css/artist/artist_main.css"/>
+<div id="contentHolder" class="roboto" ng-app>
+
+<script data-require="angular.js@*" data-semver="1.3.6" src="https://code.angularjs.org/1.3.6/angular.js"></script>
+<script src="js/artistPage/ngSetup.js"></script>
+
+    <div id="artist" ng-controller="MainController">
+        <div id="middleContent">
+            <div id="container">
+
+                <div class="header">
+
+
+                    <div id="img">
+                        <div class="overlay">
+                       <a class="artistName white size39">{{10+10}}</a>
+                    </div>
+                </div>
+                <div class="headerBar">
+                    <div class="textContainer">
+                        <a class="tracks white">Tracks</a>
+                        <a class="bio white">Biography</a>
+                        <a class="related white">Related</a>
+                    </div>
+                </div>
+
+
+                <div id="artistTracksBody">
+
+
+                <div class="miniRelatedArtists">
+                    <a class="title size29">Related Artists</a>
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+
+                            <th></th>
+                            <th></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="artist in similar">
+                            <td> <img class="thumb" src="{{ artist.image[0]['#text'] }}"></td>
+                            <td>{{ artist.name}} </td>
+                        </tr>
+
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                    <div class="topTracks">
+                        <div class="title">Top Tracks</div>
+
+                        <table id="playlistTable" class="table table-stribed">
+                            <thead>
+                            <tr>
+
+                                <th class="albumThumb"></th>
+                                <th></th>
+                                <th></th>
+
+                            </tr>
+                            </thead>
+                            <tbody id="topSongs">
+                            <tr>
+                                <td><img class="albumThumb" src="http://userserve-ak.last.fm/serve/34s/92534609.png">
+                                </td>
+                                <td>1</td>
+                                <td>Thinkin Bout you</td>
+                            </tr>
+                            <tr>
+                                <td><img class="albumThumb" src="http://userserve-ak.last.fm/serve/34s/92534609.png">
+                                </td>
+                                <td>2</td>
+                                <td>Sierra Leone</td>
+                            </tr>
+                            <tr>
+                                <td><img class="albumThumb" src="http://userserve-ak.last.fm/serve/34s/92534609.png">
+                                </td>
+                                <td>3</td>
+                                <td>Lost</td>
+                            </tr>
+                            <tr>
+                                <td><img class="albumThumb" src="http://userserve-ak.last.fm/serve/34s/92534609.png">
+                                </td>
+                                <td>4</td>
+                                <td>Super Rich Kids</td>
+                            </tr>
+                            <tr>
+                                <td><img class="albumThumb" src="http://userserve-ak.last.fm/serve/34s/92534609.png">
+                                </td>
+                                <td>5</td>
+                                <td>Forrest Gump</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                    <div id="albumContainer">
+                        <a class="albumText">
+                            <a class="albumTitle size29">Albums</a>
+
+                            <div class="album">
+
+
+                                <div class="container">
+                                    <img class="coverArt" src="http://userserve-ak.last.fm/serve/174s/92534609.png">
+
+                                    <div class="albumText">
+                                        <a class="title size19">
+                                            Channel Orange
+                                        </a>
+
+
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+
+                                                <th class="albumThumb"></th>
+                                                <th></th>
+                                                <th></th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Thinkin Bout you</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Sierra Leone</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Lost</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Super Rich Kids</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Forrest Gump</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Sierra Leone</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Lost</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Super Rich Kids</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Forrest Gump</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="album">
+
+
+                                <div class="container">
+                                    <img class="coverArt" src="http://userserve-ak.last.fm/serve/174s/92534609.png">
+
+                                    <div class="albumText">
+                                        <a class="title size19">
+                                            Channel Orange
+                                        </a>
+
+
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+
+                                                <th class="albumThumb"></th>
+                                                <th></th>
+                                                <th></th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Thinkin Bout you</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Sierra Leone</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Lost</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Super Rich Kids</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Forrest Gump</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Sierra Leone</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Lost</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Super Rich Kids</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Forrest Gump</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+          </div>                                                               

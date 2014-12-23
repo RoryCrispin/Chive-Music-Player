@@ -1,0 +1,148 @@
+#contentHolder {
+
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    overflow: scroll;
+}
+
+#contentHolder #middleContent {
+
+    margin: 0 auto;
+    width: 80%;
+    height: 100%
+
+}
+
+#contentHolder #container {
+    width: 100%;
+    box-shadow: 10px 0px 10px -7px rgba(0, 0, 0, 0.1),
+    -10px 0px 10px -7px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: auto;
+    min-height: 100%;
+
+}
+
+.header {
+    max-height: 30%;
+    height: 300px;
+    width: 100%;
+
+}
+
+.header #img {
+    background: url("http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/ocean-frank-507ed3e6ed64b.jpg") no-repeat scroll center center #ffffff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.header .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: relative;
+
+}
+
+#artist .headerBar {
+    background-color: #002739;
+    height: 35px;
+    width: 100%;
+}
+
+#artist .headerBar .textContainer {
+    padding-top: 4.5px;
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+}
+
+#artist .headerBar .tracks {
+    margin-left: 16%;
+    cursor: pointer;
+}
+
+#artist .headerBar .bio {
+    margin-left: 20%;
+    cursor: pointer;
+}
+
+#artist .headerBar .related {
+    margin-left: 20%;
+    cursor: pointer;
+}
+
+#artist #artistTracksBody {
+    margin: 20px;
+
+}
+
+#artist #artistTracksBody .topTracks .title {
+    font-size: 29px;
+
+}
+
+#artist #artistTracksBody .topTracks {
+    padding-bottom: 20px;
+}
+
+#artistTracksBody #topSongs tr {
+    border-bottom: 1px solid #d9d9d9;
+    padding-right: 10px;
+}
+
+#artistTracksBody .albumThumb {
+    width: 20px;
+}
+
+#artistTracksBody #albumContainer .coverArt {
+
+    height: 150px;
+}
+
+#artistTracksBody #albumContainer .title {
+
+    vertical-align: top;
+
+}
+
+#artistTracksBody #albumContainer .albumText {
+    margin-left: 10px;
+
+}
+
+#artistTracksBody #albumContainer .list {
+    display: inline-block;
+}
+
+#artistTracksBody #albumContainer .container {
+    display: inline-flex;
+
+}
+
+#artistTracksBody #albumContainer .albumTitle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.miniRelatedArtists .thumb {
+    height:30px;
+    width:30px;
+
+}
+.miniRelatedArtists {
+ float:right;
+}
+#artist .header .artistName {
+    bottom: 0px;
+    position: absolute;
+}
+
+#artist .album {
+    padding-bottom: 30px;
+}

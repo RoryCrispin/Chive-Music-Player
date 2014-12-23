@@ -10,14 +10,12 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
 
 </head>
 <body ng-app>
 
-<div id="index_container">
+<div id="index_container" >
 
     <div id="mediaBar">
         <i class="fa fa-backward greyHover"></i>
@@ -38,7 +36,7 @@
 
     <div id="index_leftPane" class="leftPane">
 
-        <div class="title indentLevel1 noCursor"> Chive Player</div>
+        <div class="title indentLevel1 noCursor"> {{ 10+10 }}</div>
         <div class="searchBox indentLevel1"> Search...</div>
         <div class="scrollingSidebar">
             <div class="main indentLevel1 largeThinText hoverItem"> Whats Hot</div>
@@ -96,12 +94,13 @@
         </div>
     </div>
 
-    <div id="rootFrame" class="rootFrame slide-animate" ng-include="'html_frames/artist_main.html'">
+    <div id="rootFrame" class="rootFrame">
 
     </div>
 
 
-
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 
     <script src="js/loadPage.js"></script>
 
