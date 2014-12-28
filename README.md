@@ -4,7 +4,9 @@ chive
 Web based music player.
 
 
-This is the first proof of concept version of Chive music player - I am re-writing it in AngularJS and an attractive user interface. 
+This is the first proof of concept version of Chive music player - I am currently re-writing it in AngularJS and an attractive user interface in the NewUI branch. 
+
+
 It can fetch youtube playlists and albums along with the associated youtube videos. 
 http://rorycrispin.github.io/chive/?frame=album&artist=Burial&album=Untrue&/
 
