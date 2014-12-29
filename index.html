@@ -14,10 +14,12 @@
     <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
 
-</head>
-<body ng-app>
+    <script src="js/loadPage.js"></script>
 
-<div id="index_container">
+</head>
+<body ng-app="app">
+
+<div id="index_container" ng-controller="indexctrl">
 
     <div id="mediaBar">
         <i class="fa fa-backward greyHover"></i>
@@ -96,14 +98,9 @@
         </div>
     </div>
 
-    <div id="rootFrame" class="rootFrame slide-animate" ng-include="'html_frames/artist_main.html'">
+    <div id="rootFrame" class="rootFrame slide-animate" root-frame>
 
     </div>
-
-
-
-
-    <script src="js/loadPage.js"></script>
 
 
     <script>
