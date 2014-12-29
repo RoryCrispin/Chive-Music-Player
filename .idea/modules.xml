@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/NewChive.iml" filepath="$PROJECT_DIR$/.idea/NewChive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/chive.iml" filepath="$PROJECT_DIR$/.idea/chive.iml" />
     </modules>
   </component>
 </project>
