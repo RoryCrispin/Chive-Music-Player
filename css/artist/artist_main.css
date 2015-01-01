@@ -18,8 +18,8 @@
 
 #contentHolder #container {
     width: 100%;
-    box-shadow: 10px 0px 10px -7px rgba(0, 0, 0, 0.1),
-    -10px 0px 10px -7px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 0 10px -7px rgba(0, 0, 0, 0.1),
+    -10px 0 10px -7px rgba(0, 0, 0, 0.1);
     background-color: white;
     height: auto;
     min-height: 100%;
@@ -34,7 +34,6 @@
 }
 
 .header #img {
-    background: url("http://cdn.pigeonsandplanes.com/wp-content/uploads/2014/03/ocean-frank-507ed3e6ed64b.jpg") no-repeat scroll center center #ffffff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -109,7 +108,6 @@
 
 #artistTracksBody #albumContainer .title {
 
-    vertical-align: top;
 
 }
 
@@ -141,7 +139,7 @@
  float:right;
 }
 #artist .header .artistName {
-    bottom: 0px;
+    bottom: 0;
     position: absolute;
 }
 

@@ -1,0 +1,70 @@
+<link rel="stylesheet" type="text/css" href="css/artist/artist_main.css"/>
+<div id="contentHolder" class="roboto">
+
+    <!--<script src="js/artistPage/ngSetup.js"></script>-->
+
+    <div id="artist" ng-controller="artistFrame">
+        <div id="middleContent">
+            <div id="container">
+
+                <div class="header">
+                    <!--This header need not cotain everyhthing on the page, when fixed
+             the background color works but the image is broken TODO-->
+
+                    <div id="img"
+                         style="background: url('{{artist.cover}}') no-repeat scroll center center / cover rgb(255, 255, 255)">
+                        <div class="overlay">
+                            <a class="artistName white size39">{{artist.name}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="headerBar">
+                    <div class="textContainer">
+                        <a class="tracks white">Tracks</a>
+                        <a class="bio white">Biography</a>
+                        <a class="related white">Related</a>
+                    </div>
+                </div>
+
+
+                <div id="artistTracksBody">
+
+
+                    <div class="miniRelatedArtists">
+                        <a class="title size29">Related Artists</a>
+                        <ng-include src="'html_frames/artistPage/miniRelatedArtists.html'"></ng-include>
+
+
+                    </div>
+
+                    <div class="topTracks">
+                        <div class="title">Top Tracks</div>
+
+                        <ng-include src="'html_frames/artistPage/topTracks.html'"></ng-include>
+                    </div>
+
+
+                    <div id="albumContainer">
+                        <a class="albumText">
+                            <a class="albumTitle size29">Albums</a>
+
+                            <div class="album" ng-repeat="album in artist.albums">
+                                <div ng-include="'html_frames/artistPage/albumList.html'"></div>
+
+
+                            </div>
+
+
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

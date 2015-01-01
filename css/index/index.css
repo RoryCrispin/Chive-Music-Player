@@ -3,17 +3,17 @@ body {
 }
 
 #index_container {
-    height: 98%;
-    width: 98%;
-    left: 1%;
-    top: 1%;
 
+    height: 98%;
+    left: 1%;
     position: absolute;
+    top: 1%;
+    width: 98%;
 }
 
 #rootFrame {
     position: absolute;
-    top: 0px;
+    top: 0;
 }
 
 .roboto {

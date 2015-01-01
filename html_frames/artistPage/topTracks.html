@@ -1,0 +1,21 @@
+<table id="playlistTable" class="table table-stribed">
+    <thead>
+    <tr>
+
+        <th class="albumThumb"></th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody id="topSongs">
+    <tr ng-repeat="track in artist.topTracks.track">
+        <td><img class="albumThumb" src="{{track.image[0]['#text']}}">
+        </td>
+        <td>1</td>
+        <td>{{track.name}}</td>
+    </tr>
+    </tbody>
+</table>
+
+

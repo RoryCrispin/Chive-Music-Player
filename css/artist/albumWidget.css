@@ -1,0 +1,30 @@
+#albumContainer .coverArt {
+
+    height: 150px;
+}
+
+#albumContainer .title {
+
+    vertical-align: top;
+
+}
+
+#albumContainer .albumText {
+    margin-left: 10px;
+
+}
+
+#albumContainer .list {
+    display: inline-block;
+}
+
+#albumContainer .container {
+    display: inline-flex;
+
+}
+
+#albumContainer .albumTitle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+

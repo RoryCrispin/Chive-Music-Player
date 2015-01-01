@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+    <tr>
+
+        <th></th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="artist in artist.similar">
+        <td><img class="thumb" src="{{ artist.image[0]['#text'] }}"></td>
+        <td>{{ artist.name}}</td>
+    </tr>
+
+
+    </tbody>
+</table>
+
