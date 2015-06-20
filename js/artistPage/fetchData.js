@@ -21,6 +21,8 @@ function filterAlbumAPI(data) {
 
 
     }
+
+    console.log (album);
     return album;
 }
 
@@ -36,6 +38,8 @@ function getAlbumInfo(albumData, artistName, $http, $scope) {
                 if (ic == albumData.length - 1) {
 
                     sorted = sortAlbums_releaseDate(fullAlbumInfo);
+                    simplifyAlbumDate(fullAlbumInfo);
+
                 }
                 ic++;
             }).error(function (data, status, headers, config) {
@@ -54,4 +58,12 @@ function sortAlbums_releaseDate(fullAlbumInfo) {
         return new Date(b.releasedate) - new Date(a.releasedate);
     });
     return fullAlbumInfo;
+}
+
+function simplifyAlbumDate(fullAlbumInfo) {
+    for (var i in fullAlbumInfo) {
+        var albumReleaseDate = new Date(fullAlbumInfo[i].releasedate);
+        fullAlbumInfo[i].releaseYear = albumReleaseDate.getFullYear();
+    }
+
 }
