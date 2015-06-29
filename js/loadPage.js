@@ -41,6 +41,10 @@ app.controller('indexctrl', ['$scope', '$http',
     return {
         templateUrl: 'html_frames/artistPage/artist_main.html'
     };
+}).directive('bio', function () {
+    return {
+        templateUrl: 'html_frames/artistPage/bio.html'
+    };
 });
 
 

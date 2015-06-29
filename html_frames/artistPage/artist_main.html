@@ -18,59 +18,76 @@
                         </div>
                     </div>
                 </div>
-                <div class="headerBar">
-                    <div class="textContainer">
-                        <!--<a class="tracks white">Tracks</a>-->
-
-                        <md-button class="md-accent tracks">Tracks</md-button>
-
-                        <md-button class="md-accent bio">Biography</md-button>
-                        <md-button class="md-accent related">Related</md-button>
-
-                        <!--<a class="bio white">Biography</a>-->
-                        <!--<a class="related white">Related</a>-->
-                    </div>
-                </div>
 
 
-                <div id="artistTracksBody">
+                <!--<div class="headerBar">-->
+                <!--<div class="textContainer">-->
+                <!--&lt;!&ndash;<a class="tracks white">Tracks</a>&ndash;&gt;-->
+
+                <!--<md-button class="md-accent tracks">Tracks</md-button>-->
+
+                <!--<md-button class="md-accent bio">Biography</md-button>-->
+                <!--<md-button class="md-accent related">Related</md-button>-->
+
+                <!--&lt;!&ndash;<a class="bio white">Biography</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a class="related white">Related</a>&ndash;&gt;-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <md-tabs md-dynamic-height md-stretch-tabs="always">
+                    <md-tab label="Tracks">
 
 
-                    <div class="miniRelatedArtists">
-                        <a class="title size29">Related Artists</a>
-                        <ng-include src="'html_frames/artistPage/miniRelatedArtists.html'"></ng-include>
 
 
-                    </div>
-
-                    <div class="topTracks">
-                        <div class="title">Top Tracks</div>
-
-                        <ng-include src="'html_frames/artistPage/topTracks.html'"></ng-include>
-                    </div>
+                        <div id="artistTracksBody">
 
 
-                    <div id="albumContainer">
-                        <a class="albumText">
-                            <a class="albumTitle size29">Albums</a>
-
-                            <div class="album" ng-repeat="album in artist.albums">
-                                <div ng-include="'html_frames/artistPage/albumList.html'"></div>
+                            <div class="miniRelatedArtists">
+                                <a class="title size29">Related Artists</a>
+                                <ng-include src="'html_frames/artistPage/miniRelatedArtists.html'"></ng-include>
 
 
                             </div>
 
+                            <div class="topTracks">
+                                <div class="title">Top Tracks</div>
 
-                        </a>
-                    </div>
-                </div>
+                                <ng-include src="'html_frames/artistPage/topTracks.html'"></ng-include>
+                            </div>
 
+
+                            <div id="albumContainer">
+                                <a class="albumText">
+                                    <a class="albumTitle size29">Albums</a>
+
+                                    <div class="album" ng-repeat="album in artist.albums">
+                                        <div ng-include="'html_frames/artistPage/albumList.html'"></div>
+
+
+                                    </div>
+
+
+                                </a>
+                            </div>
+                        </div>
+
+                    </md-tab>
+                    <md-tab label="Biography">
+                       <div bio></div>
+
+                    </md-tab>
+                    <md-tab label="Related Artists">
+
+                     <div relatedArtist></div>
+                    </md-tab>
+                </md-tabs>
 
             </div>
 
         </div>
 
-    </div>
+</div>
 
 
 </div>

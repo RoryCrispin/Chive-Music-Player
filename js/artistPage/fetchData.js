@@ -70,7 +70,7 @@ function simplifyAlbumDate(fullAlbumInfo) {
 function removeBracketsFromTrackName(fullAlbumInfo) {
     console.log(fullAlbumInfo[1].tracks.track[1]);
     for (var i in fullAlbumInfo) {
-        console.log("lklk" + i);
+
         //try {
         //fullAlbumInfo[i].tracks.track);
             for (var k in fullAlbumInfo[i].tracks) {
