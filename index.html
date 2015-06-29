@@ -9,14 +9,28 @@
     <link rel="stylesheet" type="text/css" href="css/index/slider.css"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+
+
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.10 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+
+
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>-->
 
     <script src="js/loadPage.js"></script>
+    <script src="js/regexes.js"></script>
 
     <script src="js/artistPage/fetchData.js"></script>
     <script src="js/artistPage/ngSetup.js"></script>
@@ -45,7 +59,15 @@
     <div id="index_leftPane" class="leftPane">
 
         <div class="title indentLevel1 noCursor"> Chive Player</div>
-        <div class="searchBox indentLevel1"> Search...</div>
+        <!--<div class="searchBox indentLevel1"> Search...</div>-->
+
+
+        <md-input-container class="indentLevel1">
+            <label>Search</label>
+            <input type="text">
+        </md-input-container>
+
+
         <div class="scrollingSidebar">
             <div class="main indentLevel1 largeThinText hoverItem"> Whats Hot</div>
             <div class="main indentLevel1 largeThinText hoverItem"> Radio</div>
@@ -91,6 +113,8 @@
             max: 100
         });
     </script>
+
+
 
 </div>
 </body>

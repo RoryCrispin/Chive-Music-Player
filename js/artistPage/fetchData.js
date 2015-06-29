@@ -39,7 +39,7 @@ function getAlbumInfo(albumData, artistName, $http, $scope) {
 
                     sorted = sortAlbums_releaseDate(fullAlbumInfo);
                     simplifyAlbumDate(fullAlbumInfo);
-
+                    removeBracketsFromTrackName(fullAlbumInfo)
                 }
                 ic++;
             }).error(function (data, status, headers, config) {
@@ -65,5 +65,22 @@ function simplifyAlbumDate(fullAlbumInfo) {
         var albumReleaseDate = new Date(fullAlbumInfo[i].releasedate);
         fullAlbumInfo[i].releaseYear = albumReleaseDate.getFullYear();
     }
+}
 
+function removeBracketsFromTrackName(fullAlbumInfo) {
+    console.log(fullAlbumInfo[1].tracks.track[1]);
+    for (var i in fullAlbumInfo) {
+        console.log("lklk" + i);
+        //try {
+        //fullAlbumInfo[i].tracks.track);
+            for (var k in fullAlbumInfo[i].tracks) {
+                //var bob = removeBracketsFromTrackName(fullAlbumInfo[i].tracks[k].name);
+                //console.log(bob);
+                //fullAlbumInfo[i].tracks.track[k] = bob;
+                console.log(k);
+            }
+        //} catch (e) {
+        //    console.log(e);
+        //}
+    }
 }

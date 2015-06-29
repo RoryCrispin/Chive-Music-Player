@@ -27,7 +27,7 @@ function sizeRootFrame() {
     });
 }
 
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngMaterial']);
 
 
 app.controller('indexctrl', ['$scope', '$http',

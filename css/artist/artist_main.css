@@ -32,7 +32,11 @@
     width: 100%;
 
 }
-
+.headerBar .md-accent {
+    color:white ;
+    margin: 0px;
+    font-size: 20px;
+}
 .header #img {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -52,12 +56,12 @@
 
 #artist .headerBar {
     background-color: #002739;
-    height: 35px;
+    height: 38px;
     width: 100%;
 }
 
 #artist .headerBar .textContainer {
-    padding-top: 4.5px;
+    /*padding-top: 4.5px;*/
     width: 100%;
     height: 35px;
     font-size: 20px;

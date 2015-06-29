@@ -33,10 +33,11 @@
 .leftPane .title {
 
     font-size: 40px;
+    padding-top:20px;
 }
 
 .leftPane .searchBox {
-
+    color:red !important;
     font-size: 29px;
 }
 
